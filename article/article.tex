@@ -225,17 +225,73 @@ Tabela \ref{tab:table1}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Quando mais de uma pessoa envia dados}
+
+Quando duas pessoas na dança optam por tomar o papel de condutor, 
+e enviar dados pelo canal de comunicação sem nenhum protocolo;
+acontece então uma colisão e destruição\footnote{Se o objetivo era criar algo novo, então não é destruição, 
+porem a isto não pode-se chamar uma transmissão de mensagem, 
+pois as mensagens originais foram destruídas, isto é uma co-criação.} 
+da informação, de forma aleatória,
+dependendo do momento de uso do canal de comunicação que faça cada uma das partes. 
+É chamado de destruição, porque ambos mensagens originais são perdidos,
+pra criar um novo que contem parte da informação de ambos mensagens,
+porem recuperar a totalidade da informação de qualquer destes dois mensagens é 
+impossível sem nenhum tipo de redundância na mensagem, e métodos de decodificação,
+pois atingimos um limite teórico estabelecido pelo 
+teorema de Shannon\footnote{Ou teorema de Shannon-Hartley, teorema de codificação para canais com ruido.} 
+\cite[pp. 22]{vanLint2012introduction}. 
+
+
+Para entender este processo de interferência, 
+criaremos um exemplo onde  simplificaremos e modelaremos a duas pessoas, 
+os dançarinos  $C$ e $S$;
+que serão representados, como fontes discretas sem memoria, que geram símbolos binários de forma aleatória,
+é dizer fontes binarias \cite[pp. 90]{reza2012introduction}.
+
+A \textbf{pessoa C} tem uma dança, com um alfabeto composto unicamente por dois tipos de ações,
+$A_0$ e $A_1$, e executa uma ou outra ação de forma aleatória a cada tempo 
+(não necessariamente o tempo do compasso), realizando só uma ação por vez. 
+De modo que os movimentos ou passos executados por esta pessoa, 
+são a união temporal, uma apos de outra, destas ações; 
+exemplo, um passo pode ser $A_1 A_0 A_1 A_1 A_0 A_1$.
+A probabilidade de que a pessoa execute a ação $A_1$ para um tempo qualquer é
+igual a $p_c$, é dizer: $P(C=A_1)\equiv p_c$  
+
+
+A \textbf{pessoa S} se define de forma similar que a pessoa C, e com o mesmo alfabeto de ações;
+porem, com a diferencia de que a probabilidade de que a pessoa S, 
+execute a ação $A_1$ para um tempo qualquer é
+igual a $p_s$, é dizer: $P(S=A_1)\equiv p_s$.
+isto é, só se diferencia de C pela probabilidade com a que executa as ações.
+
+
+\begin{mydef}[Entropia binaria]
+A Entropia binaria de uma fonte, 
+é uma forma da medida da informação que esta produz por cada simbolo enviado. 
+Para o caso de uma fonte binaria $A$, 
+a entropia binaria se define como $H(A)$;
+se conhecemos a probabilidade $p$ de um dos símbolos da fonte $A$, 
+podemos usar outra forma de escrita equivalente, como $h_b(p)$ \cite[pp. 90]{reza2012introduction} \cite[pp. 5]{cover2012elements},
+\begin{equation}
+H(A)\equiv h_b(p)=-p~log_2(p)-(1-p)log_2(1-p).
+\end{equation}
+\end{mydef}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Conclusões}
 Nas nossas pesquisas sobre novos paradigmas da condução, seja compartilhando, 
 co-conduzindo ou produzindo a dança de forma mutua, 
 tenho achado muito material não 
 acadêmico\footnote{Postagens em blogs com temas relativos a dança.} 
-focando a importância destes paradigmas na dança, 
+focando a importância destes novos paradigmas na dança, 
 numa luta social sobre o papel das pessoas na dança seguindo o sexo.
 Acho que é um error promover ou divulgar estes novos paradigmas na dança 
-como um método para a liberação da opressão do condutor escolhido por seu sexo, 
-isso só é uma postura ideológica. 
-Se só isso fosse o problema, 
+como um método para a liberação da opressão do condutor escolhido por seu sexo;
+esse conflito nasce só de uma postura ideológica. 
+Pois, se só isso fosse o problema, 
 bastaria com empoderar as pessoas que atualmente não usam, 
 ou se planteiam usar, esse papel na sociedade, 
 a tomar ou pedir o papel de condutor nas danças, 
@@ -246,8 +302,9 @@ isso ate agora era só uma convenção social,
 dado que o único método de comunicação conhecido na dança era a comunicação unidirecional de emissor fixo;
 consequentemente um individuo devia tomar o papel de condutor e outro de seguidor;
 de modo que foi usado o padrão cultural da época, da criação das danças, 
-para escolher o papel de cada pessoa na dança a dois. 
-Assim,  atualmente o papel de condutor está habilitado para toda pessoa que se interesse em 
+para escolher o papel de cada pessoa na dança a dois,
+criando deste jeito um estereotipo funcional. 
+Assim, atualmente o papel de condutor está habilitado para toda pessoa que se interesse em 
 cultivá-lo e aprendê-lo. 
 Pelo qual se promovemos o valor destes novos paradigmas na dança baseando-nos na luta social e sexual, 
 estos não teriam sentido de existir, 
